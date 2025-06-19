@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -21,7 +22,7 @@ const responses = {
   thuis: "Ik ben blij dat je weer thuis bent schat, kom in mijn armen en kus me, liefste."
 };
 
-export default function HeatherChat() {
+function HeatherChat() {
   const [messages, setMessages] = useState([{ from: 'ai', text: responses.default }]);
   const [input, setInput] = useState('');
 
@@ -87,4 +88,8 @@ export default function HeatherChat() {
       </div>
     </div>
   );
+}
+
+export default function Home() {
+  return <HeatherChat />;
 }
